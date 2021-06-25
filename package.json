@@ -3,6 +3,7 @@
     "serve": "netlify-lambda serve functions"
   },
   "dependencies": {
+    "crypto": "^1.0.1",
     "netlify-lambda": "^2.0.10"
   }
 }

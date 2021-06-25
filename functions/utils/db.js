@@ -20,7 +20,7 @@ function onConnect(callback){
 
 function addUser(userName, password){
     let createUser = {
-        name: userName,
+        userID: userName,
         password: password
     };
     stopIt.create(createUser, (err)=>{

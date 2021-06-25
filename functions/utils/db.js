@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const stopIt = require("./model");
+const user = require("./model");
 const db = mongoose.connection;
 
 function connect(){
@@ -23,7 +23,7 @@ function addUser(userName, password){
         userID: userName,
         password: password
     };
-    stopIt.create(createUser, (err)=>{
+    user.create(createUser, (err)=>{
         if(err){
             console.log(err);
             return err;

@@ -5,6 +5,6 @@ const hashSchema = mongoose.Schema({
     password: String
 });
 
-const stopIt = mongoose.model("stopIt", hashSchema);
+const user = mongoose.model("user", hashSchema);
 
-module.exports = stopIt;
+module.exports = user;

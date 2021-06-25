@@ -7,6 +7,4 @@ const hashSchema = mongoose.Schema({
 
 const stopIt = mongoose.model("stopIt", hashSchema);
 
-module.exports = {
-    stopIt
-};
+module.exports = stopIt;

@@ -25,7 +25,8 @@ function addUser(userName, password){
     };
     stopIt.create(createUser, (err)=>{
         if(err){
-            return false;
+            console.log(err);
+            return err;
         }
         return true;
     })

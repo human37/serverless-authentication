@@ -14,7 +14,7 @@ function connect(){
 }
 
 function onConnect(callback){
-    mongoose.connection.once("open",callback);
+    db.once("open",callback);
 }
 
 module.exports = {

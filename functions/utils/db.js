@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const stopIt = require("./model");
 const db = mongoose.connection;
 
 function connect(){
@@ -14,10 +15,24 @@ function connect(){
 }
 
 function onConnect(callback){
-    mongoose.connection.once("open",callback);
+    db.once("open",callback);
+}
+
+function addUser(userName, password){
+    let createUser = {
+        name: userName,
+        password: password
+    };
+    stopIt.create(createUser, (err)=>{
+        if(err){
+            return false;
+        }
+        return true;
+    })
 }
 
 module.exports = {
     connect,
     onConnect,
+    addUser,
 };

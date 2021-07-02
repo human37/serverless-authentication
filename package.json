@@ -3,6 +3,7 @@
     "serve": "netlify-lambda serve functions"
   },
   "dependencies": {
+    "co": "^4.6.0",
     "crypto": "^1.0.1",
     "mongodb-client-encryption": "^1.2.5",
     "mongoose": "^5.12.14",

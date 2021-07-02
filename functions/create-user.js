@@ -12,8 +12,7 @@ exports.handler = async function (event) {
   password = crypto
     .pbkdf2Sync(password, salt, 1000, 64, "sha512")
     .toString("hex");
-  // adds it to mongoDB
-  console.log(addUser(username, password));
+  await addUser(username, password);
   return {
     statusCode: 201,
     headers,
